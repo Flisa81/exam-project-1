@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed | Felicia’s Needle & Thread</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <a href="index.html" class="logo-link" aria-label="Felicia’s Needle & Thread home">
+        <img src="assets/logo/Logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
+      </a>
+
+      <a href="index.html" class="site-title">Felicia’s Needle & Thread</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <span id="user-greeting"></span>
+        <a href="account/login.html" id="login-link">Login</a>
+        <a href="post/create.html" id="create-post-link" style="display: none;">Create Post</a>
+        <a href="feed.html" id="feed-link" style="display: none;">Feed</a>
+        <a href="#" id="logout-link" style="display: none;">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="feed-page">
+    <h1>Latest Posts</h1>
+    <section class="posts-grid" id="posts" aria-live="polite">
+      <p>Loading posts...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Felicia’s Needle & Thread | Handmade with love & stitches</p>
+  </footer>
+
+  <script src="js/feed.js"></script>
+  <script src="js/auth-ui.js"></script>
+</body>
+</html>
