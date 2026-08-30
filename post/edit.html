@@ -64,16 +64,20 @@
   <!-- Header -->
   <header>
     <div class="header-wrapper">
-      <a href="../index.html" class="logo-link">
-        <img src="../assets/logo/logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
-        <span class="site-title">Felicia’s Needle & Thread</span>
+      <a href="../index.html" class="logo-link" aria-label="Felicia’s Needle & Thread home">
+        <img src="../assets/logo/Logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
       </a>
-      <nav class="main-nav">
+
+      <a href="../index.html" class="site-title">Felicia’s Needle & Thread</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
-        <span id="user-greeting" style="margin-left: auto;"></span>
+        <span id="user-greeting"></span>
         <a href="../account/login.html" id="login-link">Login</a>
+        <a href="../post/create.html" id="create-post-link" style="display: none;">Create Post</a>
+        <a href="../feed.html" id="feed-link" style="display: none;">Feed</a>
         <a href="#" id="logout-link" style="display: none;">Logout</a>
       </nav>
     </div>

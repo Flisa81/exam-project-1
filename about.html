@@ -7,48 +7,47 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- Header with navigation -->
   <header>
     <div class="header-wrapper">
-      <a href="index.html" class="logo-link">
-        <img src="assets/logo/logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
-        <span class="site-title">Felicia’s Needle & Thread</span>
+      <a href="index.html" class="logo-link" aria-label="Felicia’s Needle & Thread home">
+        <img src="assets/logo/Logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
       </a>
-      <nav class="main-nav">
-       <a href="index.html">Home</a>
-       <a href="about.html">About</a>
-       <a href="contact.html">Contact</a>
-       <span id="user-greeting" style="margin-left: auto;"></span>
-       <a href="account/login.html" id="login-link">Login</a>
-       <a href="#" id="logout-link" style="display: none;">Logout</a>
-</nav>
 
+      <a href="index.html" class="site-title">Felicia’s Needle & Thread</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        <span id="user-greeting"></span>
+        <a href="account/login.html" id="login-link">Login</a>
+        <a href="post/create.html" id="create-post-link" style="display: none;">Create Post</a>
+        <a href="feed.html" id="feed-link" style="display: none;">Feed</a>
+        <a href="#" id="logout-link" style="display: none;">Logout</a>
+      </nav>
     </div>
   </header>
 
-  <!-- About Content -->
-  <main>
-    <h2>About This Blog</h2>
-    <p>
-      Hi, I’m Felicia — welcome to my sewing room! I created this blog to document my passion for handmade clothing, share my process, and hopefully inspire others to pick up a needle and thread.
-    </p>
-
-    <p>
-      Whether you’re brand new to sewing or a seasoned stitcher,I hope you find inspiration and practical ideas here. From minimalist garments to warm and cozy classics, this space is all about creativity, craftsmanship, and community.
-    </p>
-
-    <img src="assets/blog/sweing-room.jpg" alt="Felicia’s Sewing Room" style="max-width:25%; margin-top: 1.5rem; border-radius: 0.5rem;" />
+  <main class="about-page">
+    <section class="about-card">
+      <p class="eyebrow">About the blog</p>
+      <h1>Welcome to my sewing room</h1>
+      <p>
+        Hi, I’m Felicia. I created this blog to document my passion for handmade clothing,
+        share my process, and inspire others to pick up a needle and thread.
+      </p>
+      <p>
+        Whether you’re brand new to sewing or already love making garments, I hope you find
+        practical ideas and creative encouragement here.
+      </p>
+      <img src="assets/blog/sweing-room.jpg" alt="Felicia’s sewing room" />
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Felicia’s Needle & Thread | Handmade with love & stitches</p>
   </footer>
-  
-<!-- Scripts -->
-  <script src="../js/edit.js"></script>
-  <script src="../js/auth-ui.js"></script>
-  <script src="../js/auth.js"></script>
+
+  <script src="js/auth-ui.js"></script>
 </body>
 </html>

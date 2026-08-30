@@ -1,5 +1,6 @@
 const API_BASE = "https://v2.api.noroff.dev";
 const token = localStorage.getItem("token");
+const apiKey = localStorage.getItem("apiKey");
 const user = JSON.parse(localStorage.getItem("user"));
 
 const params = new URLSearchParams(window.location.search);
@@ -98,6 +99,7 @@ if (commentForm) {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
+          "X-Noroff-API-Key": apiKey,
         },
         body: JSON.stringify({ body: commentText }),
       });

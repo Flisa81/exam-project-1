@@ -6,15 +6,14 @@ Welcome to *Felicia – Needle and Thread*, a responsive front-end web applicati
 
 ## 🌐 Live Site
 
-🔗 **Deployed on Netlify:**  
-[https://your-project-name.netlify.app](https://your-project-name.netlify.app)
+[https://flisa81.github.io/exam-project-1/](https://flisa81.github.io/exam-project-1/)
 
 ---
 
 ## 📁 Repository
 
 🔗 **GitHub Repo:**  
-[https://github.com/NoroffFEU/FED1-PE1-Flisa81](https://github.com/NoroffFEU/FED1-PE1-Flisa81)
+[https://github.com/Flisa81/exam-project-1](https://github.com/Flisa81/exam-project-1)
 
 ---
 
@@ -28,15 +27,6 @@ Welcome to *Felicia – Needle and Thread*, a responsive front-end web applicati
 - Create/Edit/Delete blog posts (owner only)
 - Form validation
 - API integration (GET, POST, PUT, DELETE)
-
----
-
-## 🔐 Test Login (Admin Account)
-
-Teachers may log in using their **own Noroff email**, or use this test account:
-
-- **Email:** `teacher@noroff.no`  
-- **Password:** `Felicia456!`
 
 ---
 
@@ -54,7 +44,7 @@ Teachers may log in using their **own Noroff email**, or use this test account:
 ## 🚀 How to Run Locally
 
 1. Clone the repository  
-   `git clone https://github.com/NoroffFEU/FED1-PE1-Flisa81.git`
+   `git clone https://github.com/Flisa81/exam-project-1.git`
 
 2. Open `index.html` in your browser  
    or serve via Live Server in VS Code
@@ -140,3 +130,8 @@ Despite this, all required pages are responsive, and core functionality is prese
 ---
 
 > © 2025 – FED1 Practical Exam Project – Flisa81
+
+## Latest Fix
+- Improved persistent login display across Home, About, Contact, Feed, and Create Post pages.
+- Made the auth navigation more robust by reading saved user data safely from localStorage.
+- Fixed Create Post page so it does not show the logged-out navigation when the user is already authenticated.

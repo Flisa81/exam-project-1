@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Felicia’s Needle & Thread</title>
+  <title>Feed | Felicia’s Needle & Thread</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,7 +18,7 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html">Contact</a>
         <span id="user-greeting"></span>
         <a href="account/login.html" id="login-link">Login</a>
         <a href="post/create.html" id="create-post-link" style="display: none;">Create Post</a>
@@ -28,18 +28,10 @@
     </div>
   </header>
 
-  <main class="contact-page">
-    <section class="contact-card">
-      <p class="eyebrow">Let’s connect</p>
-      <h1>Get in Touch</h1>
-      <p class="contact-intro">
-        Have a sewing question, collaboration idea, or just want to say hello?
-        I’d love to hear from you.
-      </p>
-      <div class="contact-links">
-        <a href="https://github.com/Flisa81" target="_blank" rel="noopener noreferrer">View my GitHub profile</a>
-        <p>Available for remote collaborations and frontend opportunities.</p>
-      </div>
+  <main class="feed-page">
+    <h1>Latest Posts</h1>
+    <section class="posts-grid" id="posts" aria-live="polite">
+      <p>Loading posts...</p>
     </section>
   </main>
 
@@ -47,6 +39,7 @@
     <p>&copy; 2025 Felicia’s Needle & Thread | Handmade with love & stitches</p>
   </footer>
 
+  <script src="js/feed.js"></script>
   <script src="js/auth-ui.js"></script>
 </body>
 </html>

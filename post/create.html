@@ -5,83 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create Post | Felicia’s Needle & Thread</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    main {
-      max-width: 600px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    form label {
-      font-weight: bold;
-      margin-top: 1rem;
-      display: block;
-    }
-
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 0.7rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    #media-preview {
-      margin-top: 1rem;
-      max-width: 100%;
-      border-radius: 10px;
-      display: none;
-    }
-
-    button {
-      margin-top: 1.5rem;
-      background-color: #8e4a57;
-      color: white;
-      padding: 0.7rem 1.4rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .message {
-      color: red;
-      margin-top: 0.5rem;
-    }
-
-    .success {
-      color: green;
-    }
-  </style>
 </head>
 <body>
+  <header>
+    <div class="header-wrapper">
+      <a href="../index.html" class="logo-link" aria-label="Felicia’s Needle & Thread home">
+        <img src="../assets/logo/Logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
+      </a>
 
- <header>
-  <div class="header-wrapper">
-    <a href="../index.html" class="logo-link">
-      <img src="../assets/logo/logo.png" alt="Felicia’s Needle & Thread Logo" class="logo" />
-      <span class="site-title">Felicia’s Needle & Thread</span>
-    </a>
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
-      <span id="user-greeting" style="margin-left: auto;"></span>
-      <a href="../account/login.html" id="login-link">Login</a>
-      <a href="#" id="logout-link" style="display: none;">Logout</a>
-    </nav>
-  </div>
-</header>
+      <a href="../index.html" class="site-title">Felicia’s Needle & Thread</a>
 
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <span id="user-greeting"></span>
+        <a href="../account/login.html" id="login-link">Login</a>
+        <a href="../post/create.html" id="create-post-link" style="display: none;">Create Post</a>
+        <a href="../feed.html" id="feed-link" style="display: none;">Feed</a>
+        <a href="#" id="logout-link" style="display: none;">Logout</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Create Post Form -->
-  <main>
+  <main class="form-page">
     <h2>Create a New Blog Post</h2>
 
     <form id="create-post-form">
@@ -89,12 +36,10 @@
       <input type="text" id="title" name="title" required />
 
       <label for="body">Body</label>
-      <textarea id="body" name="body" rows="6" required>
-🧵 Today I worked on a new project...
+      <textarea id="body" name="body" rows="6" required>🧵 Today I worked on a new project...
 ✨ Materials used:
 🧷 Techniques:
-📸 Final thoughts:
-      </textarea>
+📸 Final thoughts:</textarea>
 
       <label for="media">Image URL</label>
       <input type="url" id="media" name="media" placeholder="https://example.com/image.jpg" />
@@ -118,20 +63,16 @@
       </select>
 
       <img id="media-preview" src="" alt="Media Preview" />
-
       <p class="message" id="form-message"></p>
-
       <button type="submit">Publish</button>
     </form>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Felicia’s Needle & Thread | Handmade with love & stitches</p>
   </footer>
 
   <script src="../js/create.js"></script>
   <script src="../js/auth-ui.js"></script>
-  <script src="../js/auth.js"></script>
 </body>
 </html>
