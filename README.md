@@ -6,14 +6,14 @@ Welcome to *Felicia – Needle and Thread*, a responsive front-end web applicati
 
 ## 🌐 Live Site
 
-Deployment URL to be added after the improved version is published.
+[https://flisa81.github.io/exam-project-1/](https://flisa81.github.io/exam-project-1/)
 
 ---
 
 ## 📁 Repository
 
 🔗 **GitHub Repo:**  
-[https://github.com/Flisa81/FED1-PE1-Flisa81](https://github.com/Flisa81/FED1-PE1-Flisa81)
+[https://github.com/Flisa81/exam-project-1](https://github.com/Flisa81/exam-project-1)
 
 ---
 
@@ -44,7 +44,7 @@ Deployment URL to be added after the improved version is published.
 ## 🚀 How to Run Locally
 
 1. Clone the repository  
-   `git clone https://github.com/Flisa81/FED1-PE1-Flisa81.git`
+   `git clone https://github.com/Flisa81/exam-project-1.git`
 
 2. Open `index.html` in your browser  
    or serve via Live Server in VS Code
