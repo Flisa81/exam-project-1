@@ -1,15 +1,35 @@
 const API_BASE = "https://v2.api.noroff.dev";
 const form = document.getElementById("create-post-form");
 const token = localStorage.getItem("token");
-const user = JSON.parse(localStorage.getItem("user"));
+const apiKey = localStorage.getItem("apiKey");
+function safeJsonParse(value) {
+  try {
+    return value ? JSON.parse(value) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+const user = safeJsonParse(localStorage.getItem("user")) || safeJsonParse(localStorage.getItem("profile")) || safeJsonParse(localStorage.getItem("userData"));
 
 const mediaInput = document.getElementById("media");
 const mediaSelect = document.getElementById("media-select");
 const mediaPreview = document.getElementById("media-preview");
 const messageBox = document.getElementById("form-message");
 
+
+function normalizeImageUrl(url) {
+  if (!url || typeof url !== "string") return "";
+  const trimmed = url.trim();
+  const imgurMatch = trimmed.match(/^https?:\/\/(?:www\.)?imgur\.com\/([a-zA-Z0-9]+)\/?$/);
+  if (imgurMatch) {
+    return `https://i.imgur.com/${imgurMatch[1]}.jpg`;
+  }
+  return trimmed;
+}
+
 // Redirect if not logged in
-if (!token || !user) {
+if (!token || !apiKey) {
   alert("You must be logged in to create a post.");
   window.location.href = "../account/login.html";
 }
@@ -52,7 +72,7 @@ form.addEventListener("submit", async (e) => {
 
   const title = form.title.value.trim();
   const body = form.body.value.trim();
-  const mediaUrl = mediaInput.value.trim();
+  const mediaUrl = normalizeImageUrl(mediaInput.value);
   const alt = mediaPreview.alt || title;
 
   if (!title || !body) {
@@ -74,7 +94,8 @@ form.addEventListener("submit", async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
+        "X-Noroff-API-Key": apiKey
       },
       body: JSON.stringify(postData)
     });
